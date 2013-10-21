@@ -11,4 +11,4 @@ install:
 script:
   bundle exec buildr clean test
 env:
-  - JRUBY_OPTS='-J-XX:MaxPermSize=512m -XX:MaxPermSize=128m'
+  - JRUBY_OPTS='-J-XX:MaxPermSize=512m'
