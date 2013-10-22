@@ -10,5 +10,7 @@ install:
   bundle install
 script:
   bundle exec buildr clean test
+after_success:
+  bundle exec buildr package test=no
 env:
   - JRUBY_OPTS='-J-XX:MaxPermSize=512m'
