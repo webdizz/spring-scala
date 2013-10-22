@@ -1,3 +1,5 @@
+require 'scala_version'
+
 springVersion = '3.2.2.RELEASE'
 springGroup = 'org.springframework'
 SPRING_DEPS = [
@@ -17,3 +19,14 @@ JAVAX_SERVLET = 'javax.servlet:servlet-api:jar:2.5'
 COMMONS_LOGGING = 'commons-logging:commons-logging:jar:1.1.3'
 AOPALLIANCE = 'aopalliance:aopalliance:jar:1.0'
 JMS_API = 'org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1'
+
+
+COMPILE_DEPS = [
+                SPRING_DEPS,
+                "org.scala-lang:scala-library:jar:#{SCALA_VERSION}",
+                "org.scala-lang:scala-reflect:jar:#{SCALA_VERSION}",
+                JMS_API,
+                JAVAX_SERVLET,
+                COMMONS_LOGGING,
+                AOPALLIANCE
+               ]
